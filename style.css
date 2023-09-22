@@ -1,0 +1,213 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.main{
+    height: 100%;
+    width: 100%;
+   display: flex;
+}
+.left{
+    height: 100%;
+    width: 50%;
+    position: relative;
+}
+#over{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    background-color: rgba(171, 38, 38, 0.525);
+    top: 0;
+    left: 0;
+    z-index: -11;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    padding: 8vh 6vw;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 99;
+}
+nav i{
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.2em;
+    animation-name: move;
+    animation-delay: .5s;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+nav i:hover{
+    border-radius: 50%;
+    background-color:#c2c1bf;
+    color: black;
+    cursor: pointer;
+    
+}
+nav h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    color: #fffefb;
+    animation-name: top;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    
+}
+nav h1:hover{
+    border-bottom: 0.3px solid #c2c1bf;
+    border-radius: 3px;
+}
+.left img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:9;
+    animation-name: rot;
+    animation-duration: 1.7s;
+    animation-delay: .55s;
+    animation-fill-mode: forwards;
+
+}
+.left>h1{
+    position: absolute;
+    bottom: 3%;
+    right: 3%;
+    width: 60%;
+    color: white;
+    z-index: 10;
+    font-size: 80px;
+    line-height: 78px;
+    text-align: right;
+    padding: 0;
+    animation-name: down;
+    animation-delay: .9s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+
+}
+
+@keyframes move{
+    0%{
+       transform: translateX(100%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes rot{
+    0%{
+        transform:rotate(30deg) scale(1.4);
+        padding: 0;
+        margin: 0;
+    }
+    100%{
+        transform:rotate(0deg) scale(1);
+        padding: 0;
+        margin: 0;
+    }
+}
+@keyframes down{
+    0%{
+        transform: translateY(100%);
+        padding: 0;
+        margin: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        padding: 0;
+        margin: 0;
+    }
+}
+@keyframes top{
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+        padding: 0;
+        margin: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.right{
+    height: 100%;
+    width: 50%;position: relative;
+    background-color: #0000005e;
+}
+#img1{
+    height: 180px;
+    position: absolute;
+    width: 190px;
+    object-fit: cover;
+    left: 50%;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+
+}
+#img2{
+    height: 200px;
+    position: absolute;
+    width: 300px;
+    object-fit: cover;
+    top: 45%;
+    left: 10%;
+    animation-name: move;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+
+}
+#img3{
+    height: 100px;
+    position: absolute;
+    width: 140px;
+    object-fit: cover;
+    bottom: 0;
+    right: 10%;
+    animation-name: down;
+    animation-duration: 1s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+.right h1{
+    font-size:50px;
+    transform: rotate(-90deg);
+    top: 28%;
+    right: -22%;
+    position: absolute;
+    color: white;
+    
+}
